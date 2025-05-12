@@ -1,0 +1,51 @@
+Lab 2 - PCA và bài toán phân cụm
+
+Phương pháp toán cho trí tuệ nhân tạo - Bộ môn Công nghệ Tri thức
+
+1. Lập trình PCA
+1.1. Tải tập dữ liệu
+- Sử dụng tập dữ liệu iris từ thư viện scikit-learn với 4 cột: Sepal Length, Sepal Width, Petal Length, Petal Width.
+- Tải bằng đoạn code:
+    from sklearn.datasets import load_iris
+    iris = load_iris()
+    X = iris['data']
+    y = iris['target']
+
+1.2. Yêu cầu
+- Tải và đọc dữ liệu
+- In thông tin về dataset: số dòng, tên cột
+
+2. Lớp PCA (5 điểm)
+2.1. Yêu cầu
+- Tạo lớp MyPCA với các hàm: __init__, fit, transform
+    - __init__(self, n_components): khởi tạo PCA
+    - fit(self, X): khớp dữ liệu, tính EVR và CEVR
+    - transform(self, X): biến đổi dữ liệu theo PCA
+- Không dùng thư viện scikit-learn để lập trình PCA (chỉ dùng để kiểm chứng nếu cần)
+
+3. Bài toán phân cụm (5 điểm)
+3.1. Giới thiệu
+- Dữ liệu có nhiều đặc trưng, PCA giúp giảm chiều dữ liệu để huấn luyện hiệu quả hơn
+
+3.2. Cơ sở dữ liệu
+- Bộ dữ liệu ABIDE II (đã được chỉnh sửa)
+- 1004 dòng, 1444 cột
+- Nhãn "group" với 2 giá trị: "Cancer" và "Normal"
+
+3.3. Yêu cầu
+- Tải dữ liệu từ Moodle
+- Kiểm tra và in thông tin
+
+3.4. Mô hình
+- Dùng PCA để giảm chiều
+- Dùng các thuật toán phân cụm (KMeans,...) không dùng nhãn "group"
+- So sánh kết quả phân cụm với nhãn thật bằng precision, accuracy,...
+- Khảo sát và chọn số lượng thành phần PCA phù hợp, giải thích rõ trong báo cáo
+
+4. Yêu cầu khác
+- Ngôn ngữ: Python (Jupyter Notebook)
+- Thư viện được dùng: pandas, numpy (không dùng sklearn,... cho huấn luyện)
+- Nộp: Report và Source (ghi rõ thông tin thành viên)
+- Tên thư mục: MSSV01[_MSSV02...] -> nén .zip với tên [group_number].zip
+Nguồn dữ liệu: https://fcon_1000.projects.nitrc.org/indi/abide/abide_II.html
+
